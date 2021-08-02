@@ -238,8 +238,8 @@ class SinglePlayer(QWidget):
             a=line.split(':')
             b=a[-1].split(',')
             if a[0]=='Player':
-                player=Player(480,288,32,64,'res/skin/player.png')
-                player.x,player.y=int(b[0]),int(b[1])
+                player=Player(int(b[0]),int(b[1]),32,64,'res/skin/player.png')
+                player.x,player.y=int(b[2]),int(b[3])
                 self.world.connect(player,'player')
             elif a[0]=='Block':
                 block=Block(int(b[0]),int(b[1]),32,32,b[2])

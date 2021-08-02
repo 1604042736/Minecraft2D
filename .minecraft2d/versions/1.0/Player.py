@@ -135,5 +135,5 @@ class Player:
             time.sleep(0.01)
 
     def save(self,file):
-        return [f'Player:{self.x},{self.y}']
+        return [f'Player:{self.real_x},{self.real_y},{self.x},{self.y}']
         
