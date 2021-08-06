@@ -10,7 +10,7 @@ class Launcher(QWidget,Ui_Launcher):
         self.setupUi(self)
 
         self.lw_versions.itemClicked.connect(lambda:self.pb_startgame.setEnabled(True))
-        self.pb_startgame.clicked.connect(lambda:os.system(f'cd ".minecraft2d/versions/{self.lw_versions.currentItem().text()}"& start pythonw Minecraft2D.py&cd..&cd..&cd..'))
+        self.pb_startgame.clicked.connect(lambda:os.popen(f'cd ".minecraft2d/versions/{self.lw_versions.currentItem().text()}"& start pythonw Minecraft2D.py&cd..&cd..&cd..'))
         self.set_lw_versions()
 
     def set_lw_versions(self):

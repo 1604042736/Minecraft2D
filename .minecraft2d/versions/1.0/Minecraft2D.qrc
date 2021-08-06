@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="gui">
+    <file>res/gui/cover.png</file>
     <file>res/gui/default.png</file>
     <file>res/gui/hover.png</file>
     <file>res/gui/pressed.png</file>

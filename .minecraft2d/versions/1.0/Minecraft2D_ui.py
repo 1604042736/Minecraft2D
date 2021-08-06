@@ -23,6 +23,9 @@ class Ui_Minecraft2D(object):
 "}\n"
 "QPushButton:pressed{\n"
 "    border-image: url(:/gui/res/gui/pressed.png);\n"
+"}\n"
+"QWidget#p_main{\n"
+"    border-image: url(:/gui/res/gui/cover.png);\n"
 "}")
         self.p_main = QtWidgets.QWidget()
         self.p_main.setObjectName("p_main")

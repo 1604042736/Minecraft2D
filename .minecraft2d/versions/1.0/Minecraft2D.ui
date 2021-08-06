@@ -22,6 +22,9 @@ QPushButton:hover{
 }
 QPushButton:pressed{
 	border-image: url(:/gui/res/gui/pressed.png);
+}
+QWidget#p_main{
+	border-image: url(:/gui/res/gui/cover.png);
 }</string>
   </property>
   <widget class="QWidget" name="p_main">
