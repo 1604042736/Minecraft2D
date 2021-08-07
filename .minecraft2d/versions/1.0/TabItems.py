@@ -26,6 +26,6 @@ class TabItems:
             tag['obj']=Block(x,y,32,32,name)
             self.block_tag.append(tag)
             x+=self.dev
-            if x>basic_x+self.dev*9:  #超出范围
+            if x>basic_x+self.dev*8:  #超出范围
                 x=basic_x
                 y+=self.dev

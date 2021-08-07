@@ -83,6 +83,8 @@ class SinglePlayer(QWidget):
             self.hotbars=[HotBar(x+i*32,y,32,32,'res/gui/hotbar.png') for i in range(9)]
             p=0
             for i in self.bag.block_tag:
+                if p>8:
+                    break
                 self.hotbars[p].obj=i['obj']
                 p+=1
             self.world.player[0].__dict__['hotbars']=self.hotbars
@@ -213,6 +215,7 @@ class SinglePlayer(QWidget):
                 if self.mousepos[0]>=hotbar and self.mousepos[0]<=hotbar+self.bag.dev and self.mousepos[1]>=self.bag.hotbar_y and self.mousepos[1]<=self.bag.hotbar_y+self.bag.dev:
                     if self.bag.selected!=None:   #背包中选中了
                         self.bag.hotbar_tag[i]={'name':f'hotbar_{i}','obj':Block(hotbar,self.bag.hotbar_y,32,32,self.bag.block_tag[self.bag.selected]['obj'].name)}
+                        self.bag.selected=None
                     break
 
     def mouseReleaseEvent(self,e):
@@ -292,6 +295,8 @@ class SinglePlayer(QWidget):
         self.hotbars=[HotBar(x+i*32,y,32,32,'res/gui/hotbar.png') for i in range(9)]
         p=0
         for i in self.bag.block_tag:
+            if p>8:
+                break
             self.hotbars[p].obj=i['obj']
             p+=1
         self.world.player[0].__dict__['hotbars']=self.hotbars
